@@ -1,0 +1,109 @@
+<style>
+.clipboard-button {
+  display: none;
+}
+
+.clipboard--supported .clipboard-button {
+  display: initial;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+</style>
+
+<!-- Hello Programmer -->
+<br>
+<div data-controller="hello">
+  <input type="text" name="" data-hello-target="name">
+  <button data-action="click->hello#greet">Greet</button>
+  <span data-hello-target="output"></span>
+</div>
+
+
+<!-- Slider -->
+<br>
+<div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="1234" readonly>
+  <button data-action="click->clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
+</div>
+<br>
+<div data-controller="clipboard">
+  PIN: <input data-clipboard-target="source" type="text" value="5678" readonly>
+  <button data-action="click->clipboard#copy">Copy to Clipboard</button>
+</div>
+
+<div data-controller="slideshow" data-slideshow-index-value="1">
+  <button data-action="slideshow#previous"> ← </button>
+  <button data-action="slideshow#next"> → </button>
+
+  <div data-slideshow-target="slide">🐵</div>
+  <div data-slideshow-target="slide">🙈</div>
+  <div data-slideshow-target="slide">🙉</div>
+  <div data-slideshow-target="slide">🙊</div>
+</div>
+
+
+<!-- Toggle Text -->
+<br>
+<div data-controller="toggle">
+  <br>
+  <p class="hidden show" data-target="toggle.toggleable">
+    paragraph
+  </p>
+  <br>
+  <button data-action="click->toggle#toggle"> Toggle </button>
+</div>
+
+
+<!-- Modal -->
+<br>
+<div data-controller="modal">
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>
+  <br>
+  <span data-modal-target="output"></span>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Test Modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" placeholder="Entre Your Name" data-modal-target="input">
+            </div>
+            <button class="btn btn-primary" data-action="click->modal#show" data-dismiss="modal">Show Text</button>
+        </div>
+        <div class="modal-footer">
+  <!--         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div data-controller="background"
+     data-action="click->background#setToWhite">
+  <p>This will be blue, click to make it white</p>
+</div>
+
+<div data-controller="background"
+     data-background-colour="green"
+     data-action="click->background#setToWhite">
+  <p>This will be Red, click to make it white</p>
+</div>
