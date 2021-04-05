@@ -1,24 +1,13 @@
-# README
+# ror-stimulus
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple project containing some tasks to practive StimulusJS in a ROR project. Tasks details are given below:
 
-Things you may want to cover:
+* Hello Programmer: using targets
 
-* Ruby version
+* Slider:  using targets & Values
 
-* System dependencies
+* Toggle Text
 
-* Configuration
+* Bootstrap Modal iplementation
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Change BackGround color: using data-action
